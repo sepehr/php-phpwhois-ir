@@ -49,8 +49,8 @@ class ir_handler {
     $result = array();
     $result['regrinfo'] = generic_parser_b($data_str['rawdata']);
     $result['regyinfo'] = array(
-      'referrer'=>'http://whois.nic.ir/',
-      'registrar' => 'NIC-IR'
+      'registrar' => 'NIC-IR',
+      'referrer'  => 'http://whois.nic.ir/',
     );
 
     // Set availability flags.
