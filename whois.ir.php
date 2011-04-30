@@ -42,6 +42,8 @@ class ir_handler {
    *
    * @return
    *   Parsed results.
+   *
+   * @see generic_parser_b()
    */
   public function parse($data_str, $query) {
     $result = array();
@@ -53,11 +55,11 @@ class ir_handler {
 
     // Set availability flags.
     if (strpos(implode(' ', $data_str['rawdata']), 'no entries found') === FALSE) {
-			$result['regrinfo']['registered'] = 'yes';
-		}
-		else {
-			$result['regrinfo']['registered'] = 'no';
-		}
+      $result['regrinfo']['registered'] = 'yes';
+    }
+    else {
+      $result['regrinfo']['registered'] = 'no';
+    }
 
     return $result;
   }
